@@ -75,4 +75,11 @@ describe('urljoin.js', function() {
             '/'
         );
     });
+
+    it('handle multiple args', function() {
+        assert.equal(
+            urljoin('http://abc.com', '/git/', '/repos', 'aaron/test.git'),
+            'http://abc.com/git/repos/aaron/test.git'
+        );
+    });
 });
