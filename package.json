@@ -1,0 +1,30 @@
+{
+  "name": "urljoin.js",
+  "version": "0.0.0",
+  "description": "An intuitive and robust module for joining URLs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter list"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitbookIO/urljoin.js.git"
+  },
+  "keywords": [
+    "url",
+    "join",
+    "urljoin",
+    "paths",
+    "simple",
+    "robust"
+  ],
+  "author": "Aaron O'Mullan <aaron.omullan@gmail.com>",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/GitbookIO/urljoin.js/issues"
+  },
+  "homepage": "https://github.com/GitbookIO/urljoin.js#readme",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
