@@ -6,36 +6,11 @@ var urlResolve = require('url').resolve;
 function urlJoin(rootUrl, url) {
     // Normalize then resolve URLs
     return urlResolve(
-        ensureSuffix(trimSuffix(rootUrl, '/'), '/'),
-        trimPrefix(url || '', '/')
+        // Ensure trailing slash
+        rootUrl.replace(/\/$/, '') + '/',
+        // Trim preceding slash
+        (url || '').replace(/^\//, '')
     );
-}
-
-/*
- * Utility functions
- */
-
-// Ensure str (a url) ends with a suffix
-function ensureSuffix(str, suffix) {
-    return hasSuffix(str, suffix) ? str : str+suffix;
-}
-
-// Ensure str (a url) does not end with a suffix
-function trimSuffix(str, suffix) {
-    return hasSuffix(str, suffix) ? str.substring(0, str.length-suffix.length) : str;
-}
-
-// Ensure str (a url) does not start with a prefix
-function trimPrefix(str, prefix) {
-    return hasPrefix(str, prefix) ? str.substring(prefix.length) : str;
-}
-
-function hasSuffix(str, suffix) {
-    return str.substring(str.length-suffix.length) === suffix;
-}
-
-function hasPrefix(str, prefix) {
-    return str.indexOf(prefix) === 0;
 }
 
 module.exports = urlJoin;
