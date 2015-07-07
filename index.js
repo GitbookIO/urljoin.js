@@ -7,9 +7,9 @@ function urlJoin(rootUrl, url) {
     // Normalize then resolve URLs
     return urlResolve(
         // Ensure trailing slash
-        rootUrl.replace(/\/$/, '') + '/',
+        rootUrl.replace(/\/+$/, '') + '/',
         // Trim preceding slash
-        (url || '').replace(/^\//, '')
+        (url || '').replace(/^\/+/, '')
     );
 }
 
