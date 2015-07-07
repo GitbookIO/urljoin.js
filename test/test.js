@@ -23,7 +23,14 @@ describe('urljoin.js', function() {
             urljoin('/abc/', 'index.php?a=b'),
             '/abc/index.php?a=b'
         );
-    })
+    });
+
+    it('handle repeating slashes', function() {
+        assert.equal(
+            urljoin('http://abc.com//', '/team'),
+            'http://abc.com/team'
+        );
+    });
 
     it('handle preceding slashes', function() {
         assert.equal(
