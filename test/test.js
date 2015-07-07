@@ -61,5 +61,5 @@ describe('urljoin.js', function() {
             urljoin('/git/', '../about'),
             '/about'
         );
-    })
-})
+    });
+});
