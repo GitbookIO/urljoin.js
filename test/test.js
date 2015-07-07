@@ -62,4 +62,17 @@ describe('urljoin.js', function() {
             '/about'
         );
     });
+
+    it('handle empty url', function() {
+        // Map to dot like path.join
+        assert.equal(
+            urljoin(''),
+            '/'
+        );
+
+        assert.equal(
+            urljoin(),
+            '/'
+        );
+    });
 });
