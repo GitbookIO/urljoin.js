@@ -1,7 +1,7 @@
 var urlResolve = require('url').resolve;
 
-// Resolves a url relative to the root git url
-// this produces a full url (domain included)
+// urlJoin joins two urls
+// By resolving a url relative to the root url
 // this works nicely with extra slashes in places
 function urlJoin(rootUrl, url) {
     // Normalize then resolve URLs
