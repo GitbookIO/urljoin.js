@@ -5,7 +5,7 @@ An intuitive and robust module for joining URLs. Works nice in `node` and `brows
 ## Install
 
 ```
-npm i -g urljoin.js
+npm i urljoin.js
 ```
 
 ## Example
