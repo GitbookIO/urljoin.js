@@ -4,7 +4,8 @@
   "description": "An intuitive and robust module for joining URLs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter list"
+    "test": "mocha --reporter list",
+    "measure-size": "browserify --node index.js | uglifyjs | wc -c"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,9 @@
   },
   "homepage": "https://github.com/GitbookIO/urljoin.js#readme",
   "devDependencies": {
-    "mocha": "^2.2.5"
+    "browserify": "^14.3.0",
+    "mocha": "^2.2.5",
+    "uglify-js": "^3.0.1"
   },
   "dependencies": {
     "resolve-pathname": "^2.1.0"
