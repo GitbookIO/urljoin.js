@@ -1,4 +1,5 @@
 var urlResolve = require('resolve-pathname');
+var urlSplit = require('./urlsplit');
 
 // _urlJoin joins two urls
 // By resolving a url relative to the root url
@@ -16,11 +17,16 @@ function _urlJoin(rootUrl, url) {
 // urlJoin joins all arguments as URLs
 function urlJoin() {
     var args = Array.prototype.slice.call(arguments, 0);
-    return args.slice(1)
+
+    var baseUrl = args[0] || '/';
+    var parts = urlSplit(baseUrl);
+
+    var joinedPath = args.slice(1)
     .reduce(function(accu, x) {
         return _urlJoin(accu, x);
-    }, args[0] || '/');
+    }, parts.path || '/');
 
+    return _urlJoin(parts.domain, joinedPath);
 }
 
 module.exports = urlJoin;
