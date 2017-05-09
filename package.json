@@ -1,6 +1,6 @@
 {
   "name": "urljoin.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An intuitive and robust module for joining URLs",
   "main": "index.js",
   "scripts": {
