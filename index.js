@@ -1,4 +1,4 @@
-var urlResolve = require('url').resolve;
+var urlResolve = require('resolve-pathname');
 
 // _urlJoin joins two urls
 // By resolving a url relative to the root url
@@ -6,10 +6,10 @@ var urlResolve = require('url').resolve;
 function _urlJoin(rootUrl, url) {
     // Normalize then resolve URLs
     return urlResolve(
-        // Ensure trailing slash
-        (rootUrl || '').replace(/\/+$/, '') + '/',
         // Trim preceding slash
-        (url || '').replace(/^\/+/, '')
+        (url || '').replace(/^\/+/, ''),
+        // Ensure trailing slash
+        (rootUrl || '').replace(/\/+$/, '') + '/'
     );
 }
 

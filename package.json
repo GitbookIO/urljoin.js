@@ -26,5 +26,8 @@
   "homepage": "https://github.com/GitbookIO/urljoin.js#readme",
   "devDependencies": {
     "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "resolve-pathname": "^2.1.0"
   }
 }
