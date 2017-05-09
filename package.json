@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter list",
-    "measure-size": "browserify --node index.js | uglifyjs | wc -c"
+    "measure-size": "browserify --standalone pkg index.js | uglifyjs | wc -c"
   },
   "repository": {
     "type": "git",
