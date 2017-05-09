@@ -57,6 +57,12 @@ describe('urljoin.js', function() {
             'http://abc.com/about'
         );
 
+        // Ensure we can't go "below a domain"
+        assert.equal(
+            urljoin('http://abc.com/forums/', '../../about'),
+            'http://abc.com/about'
+        );
+
         assert.equal(
             urljoin('/git/', '../about'),
             '/about'
