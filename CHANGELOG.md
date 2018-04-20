@@ -5,4 +5,4 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [1.0.0] - 2018-04-20
 
-- Convert codebase to ES6 (use `require('urljoin.js').default` for commonJS)
+- Convert codebase to ES6 (use `require('joinurl').default` for commonJS)

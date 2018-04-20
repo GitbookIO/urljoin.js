@@ -1,18 +1,18 @@
-# urljoin.js
+# joinurl
 
 An intuitive and robust module for joining URLs. Works nice in `node` and `browserify`.
 
 ## Install
 
 ```
-npm i urljoin.js
+yarn add joinurl
 ```
 
 ## Example
 
 ```
-var urljoin = require('urljoin.js');
+import joinURL from 'joinurl';
 
-urljoin('http://abc.com', 'team', 'about');
+joinURL('http://abc.com', 'team', 'about');
 // => 'http://abc.com/team/about'
 ```

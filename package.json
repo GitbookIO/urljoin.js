@@ -1,5 +1,5 @@
 {
-  "name": "urljoin.js",
+  "name": "joinurl",
   "version": "1.0.0",
   "description": "An intuitive and robust module for joining URLs",
   "main": "dist/index.js",
@@ -13,10 +13,6 @@
     "prepublish": "npm run build",
     "test": "mocha --require babel-register --reporter list"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GitbookIO/urljoin.js.git"
-  },
   "keywords": [
     "url",
     "join",
@@ -25,12 +21,6 @@
     "simple",
     "robust"
   ],
-  "author": "Aaron O'Mullan <aaron.omullan@gmail.com>",
-  "license": "Apache 2",
-  "bugs": {
-    "url": "https://github.com/GitbookIO/urljoin.js/issues"
-  },
-  "homepage": "https://github.com/GitbookIO/urljoin.js#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
