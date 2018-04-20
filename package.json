@@ -4,6 +4,7 @@
   "description": "An intuitive and robust module for joining URLs",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src",
     "prebuild": "rm -rf ./dist",
     "build": "babel src -d dist",
     "prepublish": "npm run build",
@@ -31,7 +32,15 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "mocha": "^5.1.1"
+    "eslint": "^4.19.1",
+    "eslint-config-gitbook": "^3.0.0",
+    "eslint-plugin-flowtype": "^2.46.2",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "mocha": "^5.1.1",
+    "prettier": "^1.12.1"
   },
   "dependencies": {
     "resolve-pathname": "2.2.0"
