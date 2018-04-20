@@ -1,20 +1,22 @@
 // urlSplit splits a url into [`proto://domain` and `/path`]
-function urlSplit(url) {
-    var protoIdx = url.indexOf('://');
+function splitURL(url) {
+    const protoIdx = url.indexOf('://');
+
     // Plain path
-    if(protoIdx === -1) {
+    if (protoIdx === -1) {
         return {
             domain: '',
-            path: url,
+            path: url
         };
     }
 
-    var slashIdx = url.indexOf('/', protoIdx+3);
+    const slashIdx = url.indexOf('/', protoIdx + 3);
+
     // No slash, so plain domain
-    if(slashIdx === -1) {
+    if (slashIdx === -1) {
         return {
             domain: url,
-            path: '',
+            path: ''
         };
     }
 
@@ -25,4 +27,4 @@ function urlSplit(url) {
     };
 }
 
-module.exports = urlSplit;
+export default splitURL;
