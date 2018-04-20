@@ -1,8 +1,11 @@
 {
   "name": "urljoin.js",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "An intuitive and robust module for joining URLs",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint src",
     "prebuild": "rm -rf ./dist",
